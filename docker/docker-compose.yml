@@ -1,8 +1,10 @@
 services:
   convert:
     build:
-      context: ..
+      context: .
+      dockerfile: docker/Dockerfile
       args:
         VITE_COMMIT_SHA: docker
-      dockerfile: Dockerfile    # relativt compose-filens katalog (docker/), inte kontexten
-    image: convert:dev
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
