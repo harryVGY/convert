@@ -6,5 +6,5 @@ services:
       args:
         VITE_COMMIT_SHA: docker
     ports:
-      - "8080:8080"
+      - "8080:5039"
     restart: unless-stopped
