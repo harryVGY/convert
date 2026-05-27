@@ -2,7 +2,7 @@ services:
   convert:
     build:
       context: ..
-      dockerfile: Dockerfile
+      dockerfile: docker/Dockerfile
       args:
         VITE_COMMIT_SHA: docker
     ports:
