@@ -1,10 +1,8 @@
-version: '3.8'
-
 services:
   convert:
     build:
-      context: .
-      dockerfile: docker/Dockerfile
-    ports:
-      - "8080:80"
-    restart: unless-stopped
+      context: ..
+      args:
+        VITE_COMMIT_SHA: docker
+      dockerfile: Dockerfile    # relativt compose-filens katalog (docker/), inte kontexten
+    image: convert:dev
