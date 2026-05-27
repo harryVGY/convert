@@ -4,5 +4,5 @@ services:
       context: ..
       args:
         VITE_COMMIT_SHA: docker
-      dockerfile: docker/Dockerfile
+      dockerfile: Dockerfile    # relativt compose-filens katalog (docker/), inte kontexten
     image: convert:dev
