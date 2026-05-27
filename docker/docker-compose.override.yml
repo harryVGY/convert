@@ -5,6 +5,4 @@ services:
       dockerfile: Dockerfile
       args:
         VITE_COMMIT_SHA: docker
-    ports:
-      - "80:80"
     restart: unless-stopped
